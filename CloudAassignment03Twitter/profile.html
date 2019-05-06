@@ -6,7 +6,7 @@
 <body>
 {% for i in query %}
 USERNAME:<br/>{{ i.profilename }}<br/>
-<br/>BIO:<br/>{{ i.status }}<br/>
+<br/>BIO:<br/>{{ i.stat }}<br/>
 <form method='post' action='/profile/{{ i.profilename }}'>
 <br/><input type='submit' name='button' value='FOLLOW'/>
 <input type='submit' name='button' value='UNFOLLOW'/>
