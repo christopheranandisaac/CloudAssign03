@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>Update User information</title>
+</head>
+<body>
+{% for i in query %}
+USERNAME:<br/>{{ i.profilename }}<br/>
+<br/>BIO:<br/>{{ i.status }}<br/>
+<form method='post' action='/profile/{{ i.profilename }}'>
+<br/><input type='submit' name='button' value='FOLLOW'/>
+<input type='submit' name='button' value='UNFOLLOW'/>
+</form>
+<br/>TWEET:<br/>
+{% for i in mylist %}
+{{ i }}<br/>
+{% endfor %}
+{% endfor %}
+<br/><a href='/'>HOME</a>
+</body>
+</html>

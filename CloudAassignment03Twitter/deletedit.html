@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="utf-8"/>
+<title><b>EDIT TWEETS</b></title>
+</head>
+<body>
+<p align=center>PROFILENAME:</p><br/>{{ mymodel.profilename }}<br/>
+<br/>BIO:<br/>{{ mymodel.status }}<br/>
+<br/>TWEET:<br/><br/>
+{% for i in mylist %}
+<form method="post" action="/deletedit/{{ mymodel.profilename }}">
+<input type="text" name="users_name" value="{{ i }}"/>
+<input type="hidden" value="{{ loop.index }}" name="index"/>
+<input type="submit" value="Edit" name="button"/>
+<br/>
+<input align=center type="submit" name="button" value="delete"/></form>
+<br/>
+{% endfor %}
+<br/><a href='/'>HOME</a>
+</body>
+</html>
